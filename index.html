@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Response Viewer</title>
+</head>
+<body>
+    <h1>API Response Viewer</h1>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    <div>
+        <label for="college">College Name:</label>
+        <input type="text" id="college" placeholder="Enter your college name">
+    </div>
+    <div>
+        <label for="course">Course:</label>
+        <input type="text" id="course" placeholder="Enter your course">
+    </div>
+    <button onclick="fetchData()">Fetch Data</button>
+    <pre id="response"></pre>
+
+    <script>
+        function fetchData() {
+            const name = document.getElementById("name").value;
+            const college = document.getElementById("college").value;
+            const course = document.getElementById("course").value;
+
+            const studentData = {
+                name: name,
+                college: college,
+                course: course
+            };
+            const cacheBuster = new Date().getTime();
+            const url = `http://3.7.66.66:7000/generate-document?cacheBuster=${cacheBuster}`;
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(studentData)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const responseContainer = document.getElementById('response');
+                    responseContainer.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>

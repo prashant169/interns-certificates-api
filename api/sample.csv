@@ -1,0 +1,3 @@
+firstName,lastName,course,collegeName,address,refId
+John,Doe,Computer Science,ABC University,123 Main St, City,ref-123456
+Jane,Smith,Mathematics,XYZ College,456 Elm St, Town,ref-789012

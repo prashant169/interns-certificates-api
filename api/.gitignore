@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# Editor/IDE
+.vscode/
+.idea/
+*.iml
+#*.docx
+*.pdf
+# Logs
+logs/
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Cache and temporary files
+*.cache
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
