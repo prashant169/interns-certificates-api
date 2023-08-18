@@ -1,20 +1,19 @@
 # API Documentation and Usage Guide
 
-Welcome to the API documentation for our service! This guide will walk you through how to interact with our API, which is running as a Docker container on our EC2 instance at `3.7.66.66:7000`.
+Welcome to the API documentation for our service! This guide will walk you through how to interact with our API, which is running as a Docker container on our EC2 instance at `43.205.199.90:7000`.
 
 ## API Endpoint
 
 The API endpoint is accessible at:
 
-http://3.7.66.66:7000/generate-document
+http://43.205.199.90:7000/generate-document
 
 
 ## API Documentation
 
 We have set up Swagger documentation for our API, making it easy for you to explore the available endpoints and understand their usage. The Swagger documentation can be accessed at:
 
-
-http://3.7.66.66:7000/api-docs
+http://43.205.199.90:7000/api-docs
 
 
 ## Using Postman
